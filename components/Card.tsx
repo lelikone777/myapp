@@ -1,5 +1,7 @@
-const Card = ({ children }: { children: React.ReactNode }) => (
-  <div className="rounded-xl border border-(--border) bg-(--card) shadow-(--shadow) p-6">
+import type { ReactNode } from "react";
+
+const Card = ({ children }: { children: ReactNode }) => (
+  <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-[var(--shadow)] p-6">
     {children}
   </div>
 );

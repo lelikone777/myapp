@@ -25,7 +25,7 @@ const ProjectsPage = () => {
                 <h2 className="text-xl font-semibold">{project.title}</h2>
                 <span className="text-sm text-[var(--accent)]">View</span>
               </div>
-              <p className="mt-3 text-(--muted)">{project.description}</p>
+              <p className="mt-3 text-[var(--muted)]">{project.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <span
