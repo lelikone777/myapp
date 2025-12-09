@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import type { Project } from "../data/projects";
 import { projects } from "../data/projects";
 import Link from "next/link";
 import Card from "@/components/Card";
 import Section from "@/components/Section";
+
+export const metadata: Metadata = {
+  title: "Projects | Portfolio",
+  description: "Selected projects with descriptions and tech stacks.",
+};
 
 const ProjectsPage = () => {
   return (
@@ -10,14 +16,14 @@ const ProjectsPage = () => {
       <div className="space-y-2">
         <p className="text-sm text-[var(--muted)]">My work</p>
         <h1 className="text-3xl font-semibold">Projects</h1>
-        <p className="text-[var(--muted)]">Подборка проектов с кратким описанием и стеком.</p>
+        <p className="text-[var(--muted)]">A selection of projects with short descriptions and stacks.</p>
       </div>
 
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {projects.map((project: Project) => (
           <Link
             key={project.title}
-            href={project.link}
+            href={`/projects/${project.slug}`}
             className="block focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--card)]"
           >
             <Card>

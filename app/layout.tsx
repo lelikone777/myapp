@@ -11,8 +11,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Портфолио — Твоё имя",
-  description: "Frontend/Fullstack developer portfolio",
+  title: "Portfolio — [Your Name]",
+  description: "Personal portfolio site built with Next.js.",
 };
 
 export default function RootLayout({
@@ -22,12 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.variable} antialiased`}
-      >
-        <Header/>
+      <body className={`${manrope.variable} antialiased`}>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
