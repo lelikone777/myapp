@@ -1,32 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --muted: #475569;
-  --border: #e2e8f0;
+  /* Light theme: бело-голубая палитра */
+  --background: #f8fbff;
+  --foreground: #0a1a2a;
+  --muted: #4b5563;
+  --border: #d7e3f8;
   --card: #ffffff;
   --accent: #2563eb;
-  --accent-foreground: #f8fafc;
+  --accent-foreground: #f8fbff;
 
   --radius: 12px;
   --shadow: 0 14px 40px -24px rgba(15, 23, 42, 0.45);
   --container: 1180px;
 
   --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b1220;
-    --foreground: #e2e8f0;
-    --muted: #94a3b8;
-    --border: #1f2937;
-    --card: #0f172a;
-    --accent: #3b82f6;
-    --accent-foreground: #e2e8f0;
-    --shadow: 0 14px 50px -28px rgba(0, 0, 0, 0.8);
-  }
+:root[data-theme="dark"] {
+  /* Dark theme: тёмно-голубая палитра */
+  --background: #0a1220;
+  --foreground: #e5edff;
+  --muted: #9fb3d9;
+  --border: #1f2b3d;
+  --card: #0f172a;
+  --accent: #60a5fa;
+  --accent-foreground: #0a1220;
+  --shadow: 0 14px 50px -28px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
 }
 
 * {
