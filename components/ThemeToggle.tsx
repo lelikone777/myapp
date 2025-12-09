@@ -20,7 +20,7 @@ const ThemeToggle = () => {
             key={option.value}
             type="button"
             onClick={() => setTheme(option.value)}
-            className={`rounded-md px-3 py-1 transition ${
+            className={`cursor-pointer rounded-md px-3 py-1 transition ${
               isActive
                 ? "bg-[var(--accent)] text-[var(--accent-foreground)]"
                 : "text-[var(--muted)] hover:text-[var(--foreground)]"

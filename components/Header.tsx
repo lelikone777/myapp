@@ -21,12 +21,11 @@ const Header = () => {
         <Image
           src="/logo.png"
           alt="Logo"
-          width={40}
-          height={40}
-          className="h-12 w-12 rounded-md object-cover"
+          width={56}
+          height={56}
+          className="h-14 w-14 rounded-md object-cover"
           priority
         />
-        <span className="text-xl font-semibold text-[var(--foreground)]">My App</span>
       </Link>
       <div className="flex items-center gap-4">
         <nav className="flex items-center gap-3">
@@ -39,8 +38,8 @@ const Header = () => {
                 aria-current={isActive ? "page" : undefined}
                 className={`rounded-lg px-4 py-2 transition-colors ${
                   isActive
-                    ? "bg-[var(--card)] text-[var(--foreground)]"
-                    : "text-[var(--muted)] hover:text-[var(--foreground)]"
+                    ? "bg-[var(--accent)] text-[var(--accent-foreground)] font-semibold shadow-sm"
+                    : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--nav-hover)]"
                 }`}
               >
                 {label}
