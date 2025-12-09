@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Card from "@/components/Card";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "About | Portfolio",
@@ -15,11 +16,11 @@ export default function About() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16 space-y-6">
+    <Section>
       <div className="space-y-3">
         <p className="text-sm text-[var(--muted)]">About</p>
-        <h1 className="text-3xl font-semibold">About Me</h1>
-        <p className="text-xl text-[var(--muted)]">
+        <h1 className="text-3xl font-semibold sm:text-4xl">About Me</h1>
+        <p className="text-lg text-[var(--muted)] sm:text-xl">
           My name is <strong>[Your name]</strong>, and I&apos;m a <strong>[Your role]</strong> focusing on building
           clear, fast, and accessible web experiences.
         </p>
@@ -27,7 +28,7 @@ export default function About() {
 
       <Card>
         <div className="space-y-2">
-          <h2 className="text-xl font-semibold">Highlights</h2>
+          <h2 className="text-xl font-semibold sm:text-2xl">Highlights</h2>
           <ul className="list-disc space-y-1 pl-5 text-[var(--muted)]">
             {highlights.map((item) => (
               <li key={item}>{item}</li>
@@ -38,7 +39,7 @@ export default function About() {
 
       <Card>
         <div className="space-y-3">
-          <h2 className="text-xl font-semibold">Skills</h2>
+          <h2 className="text-xl font-semibold sm:text-2xl">Skills</h2>
           <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
               <span
@@ -51,6 +52,6 @@ export default function About() {
           </div>
         </div>
       </Card>
-    </section>
+    </Section>
   );
 }

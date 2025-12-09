@@ -11,14 +11,16 @@ export const metadata: Metadata = {
 };
 
 export default function Intro() {
-  const featured = projects.slice(0, 3);
+  const featured = projects.slice(0, 4);
 
   return (
     <Section>
       <div className="space-y-4">
         <p className="text-sm text-[var(--muted)]">Hi, I&apos;m</p>
-        <h1 className="text-5xl font-semibold">Aleksei Kalinin — React developer</h1>
-        <p className="max-w-3xl text-xl text-[var(--muted)]">
+        <h1 className="text-3xl font-semibold leading-tight sm:text-5xl">
+          Aleksei Kalinin — React developer
+        </h1>
+        <p className="max-w-3xl text-lg text-[var(--muted)] sm:text-xl">
           I build fast, clear, and accessible interfaces with React and Next.js. I care about developer experience,
           performance, and keeping codebases clean and maintainable.
         </p>
@@ -40,17 +42,17 @@ export default function Intro() {
 
       <div className="mt-12 space-y-4">
         <h2 className="text-2xl font-semibold">Featured projects</h2>
-        <ul className="flex flex-wrap items-start justify-start gap-4">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {featured.map((project: Project) => (
-            <li key={project.title} className="w-full max-w-xl">
+            <li key={project.title} className="w-full">
               <Link
                 href={`/projects/${project.slug}`}
                 className="block focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--card)]"
               >
                 <Card>
                   <div className="flex flex-col items-start gap-3">
-                    <h3 className="text-2xl font-semibold">{project.title}</h3>
-                    <p className="text-lg text-[var(--muted)]">{project.description}</p>
+                    <h3 className="text-xl font-semibold sm:text-2xl">{project.title}</h3>
+                    <p className="text-base text-[var(--muted)] sm:text-lg">{project.description}</p>
                     <span className="text-zinc-600 dark:text-zinc-400">Learn more</span>
                   </div>
                 </Card>
