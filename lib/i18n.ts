@@ -29,16 +29,17 @@ const translations = {
         "My name is Aleksei Kalinin, and I’m a frontend developer focusing on building clear, fast, and accessible web experiences.",
       highlights: "Highlights",
       skills: "Skills",
-    },
-    contact: {
-      label: "Contact",
-      title: "Let’s work together",
-      subtitle: "I’m open to React/Next.js roles and freelance projects. Remote-first, comfortable collaborating across time zones.",
-      emailCta: "Email me",
-      resume: "Download resume",
-      response: "Typically respond within 1 business day.",
-    },
   },
+  contact: {
+    label: "Contact",
+    title: "Let’s work together",
+    subtitle: "I’m open to React/Next.js roles and freelance projects. Remote-first, comfortable collaborating across time zones.",
+    requestCta: "Leave a request",
+    emailCta: "Email me",
+    resume: "Download resume",
+    response: "Typically respond within 1 business day.",
+  },
+},
   ru: {
     nav: { home: "Главная", projects: "Проекты", about: "Обо мне", contact: "Контакты" },
     hero: {
@@ -66,15 +67,16 @@ const translations = {
       highlights: "Факты",
       skills: "Навыки",
     },
-    contact: {
-      label: "Контакты",
-      title: "Давайте работать вместе",
-      subtitle: "Открыт к ролям React/Next.js и фрилансу. Работаю удаленно, комфортно взаимодействую в разных часовых поясах.",
-      emailCta: "Написать на почту",
-      resume: "Скачать резюме",
-      response: "Отвечаю обычно в течение одного рабочего дня.",
-    },
+  contact: {
+    label: "Контакты",
+    title: "Давайте работать вместе",
+    subtitle: "Открыт к ролям React/Next.js и фрилансу. Работаю удаленно, комфортно взаимодействую в разных часовых поясах.",
+    requestCta: "Оставить заявку",
+    emailCta: "Написать на почту",
+    resume: "Скачать резюме",
+    response: "Отвечаю обычно в течение одного рабочего дня.",
   },
+},
 };
 
 type TranslationKey =
