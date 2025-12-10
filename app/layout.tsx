@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
+import LanguageProvider from "@/components/LanguageProvider";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -25,9 +26,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable} antialiased`}>
         <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
+          <LanguageProvider>
+            <Header />
+            {children}
+            <Footer />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -5,17 +5,20 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 import { useEffect, useState } from "react";
+import LanguageDropdown from "./LanguageDropdown";
+import { useLanguage } from "./LanguageProvider";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", key: "nav.home" as const },
+  { href: "/projects", key: "nav.projects" as const },
+  { href: "/about", key: "nav.about" as const },
+  { href: "/contact", key: "nav.contact" as const },
 ];
 
 const Header = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     setIsOpen(false);
@@ -35,6 +38,9 @@ const Header = () => {
           />
         </Link>
         <div className="flex items-center gap-3">
+          <div className="md:hidden">
+            <LanguageDropdown />
+          </div>
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
@@ -53,7 +59,7 @@ const Header = () => {
                 : "pointer-events-none opacity-0 -translate-y-2"
             } md:static md:mx-0 md:mt-0 md:flex md:flex-row md:items-center md:gap-3 md:border-0 md:bg-transparent md:p-0 md:pointer-events-auto md:opacity-100 md:translate-y-0`}
           >
-            {navItems.map(({ href, label }) => {
+            {navItems.map(({ href, key: navKey }) => {
               const isActive = href === "/" ? pathname === href : pathname?.startsWith(href);
               return (
                 <Link
@@ -66,7 +72,7 @@ const Header = () => {
                       : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--nav-hover)]"
                   }`}
                 >
-                  {label}
+                  {t(navKey)}
                 </Link>
               );
             })}
@@ -76,8 +82,9 @@ const Header = () => {
               </div>
             </div>
           </nav>
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-2">
             <ThemeToggle />
+            <LanguageDropdown />
           </div>
         </div>
       </div>
