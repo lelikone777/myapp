@@ -70,8 +70,10 @@ const Header = () => {
                 </Link>
               );
             })}
-            <div className="md:hidden">
-              <ThemeToggle />
+            <div className="md:hidden flex justify-center">
+              <div className="inline-flex">
+                <ThemeToggle />
+              </div>
             </div>
           </nav>
           <div className="hidden md:block">

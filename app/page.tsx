@@ -18,7 +18,7 @@ export default function Intro() {
       <div className="space-y-4">
         <p className="text-sm text-[var(--muted)]">Hi, I&apos;m</p>
         <h1 className="text-3xl font-semibold leading-tight sm:text-5xl">
-          Aleksei Kalinin — React developer
+          Aleksei Kalinin — Frontend developer
         </h1>
         <p className="max-w-3xl text-lg text-[var(--muted)] sm:text-xl">
           I build fast, clear, and accessible interfaces with React and Next.js. I care about developer experience,

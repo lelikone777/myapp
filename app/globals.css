@@ -49,3 +49,8 @@ body {
 a {
   text-decoration: none;
 }
+
+/* Hide Next.js dev badge if present */
+[data-next-badge] {
+  display: none !important;
+}

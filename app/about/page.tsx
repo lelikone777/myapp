@@ -21,37 +21,39 @@ export default function About() {
         <p className="text-sm text-[var(--muted)]">About</p>
         <h1 className="text-3xl font-semibold sm:text-4xl">About Me</h1>
         <p className="text-lg text-[var(--muted)] sm:text-xl">
-          My name is <strong>[Your name]</strong>, and I&apos;m a <strong>[Your role]</strong> focusing on building
-          clear, fast, and accessible web experiences.
+          My name is <strong>Aleksei Kalinin</strong>, and I&apos;m a <strong>frontend developer</strong> focusing on
+          building clear, fast, and accessible web experiences.
         </p>
       </div>
 
-      <Card>
-        <div className="space-y-2">
-          <h2 className="text-xl font-semibold sm:text-2xl">Highlights</h2>
-          <ul className="list-disc space-y-1 pl-5 text-[var(--muted)]">
-            {highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </Card>
-
-      <Card>
-        <div className="space-y-3">
-          <h2 className="text-xl font-semibold sm:text-2xl">Skills</h2>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-[var(--border)] bg-[var(--card)] px-3 py-1 text-sm text-[var(--muted)]"
-              >
-                {skill}
-              </span>
-            ))}
+      <div className="mt-6 space-y-4 sm:mt-8">
+        <Card>
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold sm:text-2xl">Highlights</h2>
+            <ul className="list-disc space-y-1 pl-5 text-[var(--muted)]">
+              {highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-      </Card>
+        </Card>
+
+        <Card>
+          <div className="space-y-3">
+            <h2 className="text-xl font-semibold sm:text-2xl">Skills</h2>
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-[var(--border)] bg-[var(--card)] px-3 py-1 text-sm text-[var(--muted)]"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </Card>
+      </div>
     </Section>
   );
 }
